@@ -1,0 +1,1 @@
+print('people said ,"Love is love."')
