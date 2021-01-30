@@ -1,0 +1,20 @@
+#2021/1/30
+#My first python
+message='hello world!'
+print(message)
+
+user_name='iamts'
+print(message+"I am"+user_name+".")
+
+name='wanghongbo'
+print(name.lower())
+print(name.upper())
+print(name.title())
+
+name='\t wanghongbo'
+print(name)
+print(name.lstrip())
+print(name.rstrip())
+print(name.strip())
+
+print(3*9)
