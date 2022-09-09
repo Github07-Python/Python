@@ -42,18 +42,18 @@ MAE = []
 result_MAE_plot = []
 if __name__ == "__main__":
 
-    df1 = pd.read_csv("..\\..\\Benchmark\\timing1500x14.csv")
-    df2 = pd.read_csv("..\\..\\Benchmark\\timing3700x14.csv")
-    df3 = pd.read_csv("..\\..\\Benchmark\\timing9500x14.csv")
-    df4 = pd.read_csv("..\\..\\Benchmark\\timing20000x14.csv")
-    df5 = pd.read_csv("..\\..\\Benchmark\\timing50000x14.csv")
-    df6 = pd.read_csv("..\\..\\Benchmark\\timing100000x14.csv")
+    df1 = pd.read_csv("..\\..\\Benchmark\\Benchmark\\b17\\b17_Corner_timing1500x3.csv")
+    # df2 = pd.read_csv("..\\..\\Benchmark\\timing3700x14.csv")
+    # df3 = pd.read_csv("..\\..\\Benchmark\\timing9500x14.csv")
+    # df4 = pd.read_csv("..\\..\\Benchmark\\timing20000x14.csv")
+    # df5 = pd.read_csv("..\\..\\Benchmark\\timing50000x14.csv")
+    # df6 = pd.read_csv("..\\..\\Benchmark\\timing100000x14.csv")
     df_data1 = np.array(df1.values[:, 1:])
-    df_data2 = np.array(df2.values[:, 1:])
-    df_data3 = np.array(df3.values[:, 1:])
-    df_data4 = np.array(df4.values[:, 1:])
-    df_data5 = np.array(df5.values[:, 1:])
-    df_data6 = np.array(df6.values[:, 1:])
+    # df_data2 = np.array(df2.values[:, 1:])
+    # df_data3 = np.array(df3.values[:, 1:])
+    # df_data4 = np.array(df4.values[:, 1:])
+    # df_data5 = np.array(df5.values[:, 1:])
+    # df_data6 = np.array(df6.values[:, 1:])
     # print(df_data1)
 
     # --------------------------------------
@@ -72,80 +72,80 @@ if __name__ == "__main__":
     result = 0
 
     # --------------------------------------
-    for i in range(df_data2.shape[1]):
-        data_feature = df_data2[:, i].reshape(-1, 1)  # 第 i 列
-        data_target = np.delete(df_data2, i, axis=1)  # del 第 i 列
-        for j in data_target.T:  # 对 列 进行迭代
-            tmp = myMLPRegressor(data_feature, j.reshape(-1, 1))
-            MAE.append(tmp)
-    result = sum(MAE) / len(MAE)
-    print("MAE", MAE, "\nlen(MAE)", len(MAE))  # 13*14 次
-    print("result", result)
-
-    result_MAE_plot.append(result)
-    MAE.clear()
-    result = 0
-
-    # --------------------------------------
-    for i in range(df_data3.shape[1]):
-        data_feature = df_data3[:, i].reshape(-1, 1)  # 第 i 列
-        data_target = np.delete(df_data3, i, axis=1)  # del 第 i 列
-        for j in data_target.T:  # 对 列 进行迭代
-            tmp = myMLPRegressor(data_feature, j.reshape(-1, 1))
-            MAE.append(tmp)
-    result = sum(MAE) / len(MAE)
-    print("MAE", MAE, "\nlen(MAE)", len(MAE))  # 13*14 次
-    print("result", result)
-
-    result_MAE_plot.append(result)
-    MAE.clear()
-    result = 0
+    # for i in range(df_data2.shape[1]):
+    #     data_feature = df_data2[:, i].reshape(-1, 1)  # 第 i 列
+    #     data_target = np.delete(df_data2, i, axis=1)  # del 第 i 列
+    #     for j in data_target.T:  # 对 列 进行迭代
+    #         tmp = myMLPRegressor(data_feature, j.reshape(-1, 1))
+    #         MAE.append(tmp)
+    # result = sum(MAE) / len(MAE)
+    # print("MAE", MAE, "\nlen(MAE)", len(MAE))  # 13*14 次
+    # print("result", result)
+    #
+    # result_MAE_plot.append(result)
+    # MAE.clear()
+    # result = 0
+    #
+    # # --------------------------------------
+    # for i in range(df_data3.shape[1]):
+    #     data_feature = df_data3[:, i].reshape(-1, 1)  # 第 i 列
+    #     data_target = np.delete(df_data3, i, axis=1)  # del 第 i 列
+    #     for j in data_target.T:  # 对 列 进行迭代
+    #         tmp = myMLPRegressor(data_feature, j.reshape(-1, 1))
+    #         MAE.append(tmp)
+    # result = sum(MAE) / len(MAE)
+    # print("MAE", MAE, "\nlen(MAE)", len(MAE))  # 13*14 次
+    # print("result", result)
+    #
+    # result_MAE_plot.append(result)
+    # MAE.clear()
+    # result = 0
 
 # --------------------------------------
-    for i in range(df_data4.shape[1]):
-        data_feature = df_data4[:,i].reshape(-1,1)  #第 i 列
-        data_target = np.delete(df_data4,i,axis=1)  #del 第 i 列
-        for j in data_target.T:  #对 列 进行迭代
-            tmp = myMLPRegressor(data_feature,j.reshape(-1,1))
-            MAE.append(tmp)
-    result = sum(MAE)/len(MAE)
-    print("MAE",MAE,"\nlen(MAE)",len(MAE))  # 13*14 次
-    print("result",result)
+#     for i in range(df_data4.shape[1]):
+#         data_feature = df_data4[:,i].reshape(-1,1)  #第 i 列
+#         data_target = np.delete(df_data4,i,axis=1)  #del 第 i 列
+#         for j in data_target.T:  #对 列 进行迭代
+#             tmp = myMLPRegressor(data_feature,j.reshape(-1,1))
+#             MAE.append(tmp)
+#     result = sum(MAE)/len(MAE)
+#     print("MAE",MAE,"\nlen(MAE)",len(MAE))  # 13*14 次
+#     print("result",result)
+#
+#     result_MAE_plot.append(result)
+#     MAE.clear()
+#     result = 0
+#     # --------------------------------------
+#     for i in range(df_data5.shape[1]):
+#         data_feature = df_data5[:, i].reshape(-1, 1)  # 第 i 列
+#         data_target = np.delete(df_data5, i, axis=1)  # del 第 i 列
+#         for j in data_target.T:  # 对 列 进行迭代
+#             tmp = myMLPRegressor(data_feature, j.reshape(-1, 1))
+#             MAE.append(tmp)
+#     result = sum(MAE) / len(MAE)
+#     print("MAE", MAE, "\nlen(MAE)", len(MAE))  # 13*14 次
+#     print("result", result)
+#
+#     result_MAE_plot.append(result)
+#     MAE.clear()
+#     result = 0
+#     # --------------------------------------
+#     for i in range(df_data6.shape[1]):
+#         data_feature = df_data6[:, i].reshape(-1, 1)  # 第 i 列
+#         data_target = np.delete(df_data6, i, axis=1)  # del 第 i 列
+#         for j in data_target.T:  # 对 列 进行迭代
+#             tmp = myMLPRegressor(data_feature, j.reshape(-1, 1))
+#             MAE.append(tmp)
+#     result = sum(MAE) / len(MAE)
+#     print("MAE", MAE, "\nlen(MAE)", len(MAE))  # 13*14 次
+#     print("result", result)
+#
+#     result_MAE_plot.append(result)
+#     MAE.clear()
+#     result = 0
 
-    result_MAE_plot.append(result)
-    MAE.clear()
-    result = 0
-    # --------------------------------------
-    for i in range(df_data5.shape[1]):
-        data_feature = df_data5[:, i].reshape(-1, 1)  # 第 i 列
-        data_target = np.delete(df_data5, i, axis=1)  # del 第 i 列
-        for j in data_target.T:  # 对 列 进行迭代
-            tmp = myMLPRegressor(data_feature, j.reshape(-1, 1))
-            MAE.append(tmp)
-    result = sum(MAE) / len(MAE)
-    print("MAE", MAE, "\nlen(MAE)", len(MAE))  # 13*14 次
-    print("result", result)
 
-    result_MAE_plot.append(result)
-    MAE.clear()
-    result = 0
-    # --------------------------------------
-    for i in range(df_data6.shape[1]):
-        data_feature = df_data6[:, i].reshape(-1, 1)  # 第 i 列
-        data_target = np.delete(df_data6, i, axis=1)  # del 第 i 列
-        for j in data_target.T:  # 对 列 进行迭代
-            tmp = myMLPRegressor(data_feature, j.reshape(-1, 1))
-            MAE.append(tmp)
-    result = sum(MAE) / len(MAE)
-    print("MAE", MAE, "\nlen(MAE)", len(MAE))  # 13*14 次
-    print("result", result)
-
-    result_MAE_plot.append(result)
-    MAE.clear()
-    result = 0
-
-
-    ##plot
+##plot--------------------------------------------------------------------------------------
     print("result_MAE_plot", result_MAE_plot)
 
     x_ax = range(1, len(result_MAE_plot) + 1)

@@ -39,7 +39,8 @@ def linear3(data_feature,data_target):
 MAE = []
 result_MAE_plot = []
 if __name__ == "__main__":
-    df1 = pd.read_csv("..\\..\\Benchmark\\timing1500x14.csv")
+    df1 = pd.read_csv("..\\..\\Benchmark\\Benchmark\\b17\\b17_Corner_timing1500x3.csv")
+    # df1 = pd.read_csv("..\\..\\Benchmark\\timing1500x14.csv")
     df2 = pd.read_csv("..\\..\\Benchmark\\timing3700x14.csv")
     df3 = pd.read_csv("..\\..\\Benchmark\\timing9500x14.csv")
     df4 = pd.read_csv("..\\..\\Benchmark\\timing20000x14.csv")
