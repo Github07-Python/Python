@@ -25,6 +25,7 @@ def linear3(data_feature,data_target):
     estimator = Ridge()
     estimator.fit(x_train,y_train)
 
+
     print("Ridge Regression 权重系数:",estimator.coef_)
     print("Ridge Regression 偏置:",estimator.intercept_)
 
